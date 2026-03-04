@@ -92,9 +92,14 @@ Alice：收到，正在处理……[几分钟后]
 ```
 
 <p align="center">
-  <img src="https://img.alicdn.com/imgextra/i3/O1CN01Kvz9CF1l8XwU7izC9_!!6000000004774-0-tps-589-1280.jpg" width="280" alt="Manager 创建 Worker" />
+  <img src="https://img.alicdn.com/imgextra/i3/O1CN01Kvz9CF1l8XwU7izC9_!!6000000004774-0-tps-589-1280.jpg" width="240" />
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://img.alicdn.com/imgextra/i2/O1CN01lifZMs1h7qscHxCsH_!!6000000004231-0-tps-589-1280.jpg" width="280" alt="人类直接指挥 Worker" />
+  <img src="https://img.alicdn.com/imgextra/i2/O1CN01lifZMs1h7qscHxCsH_!!6000000004231-0-tps-589-1280.jpg" width="240" />
+</p>
+<p align="center">
+  <sub>① Manager 创建 Worker，分配任务</sub>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <sub>② 人类也可以直接在房间里指挥 Worker</sub>
 </p>
 
 Manager 还会定期发送心跳检查——如果某个 Worker 卡住了，它会自动提醒你。
