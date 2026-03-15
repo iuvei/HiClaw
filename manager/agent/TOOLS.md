@@ -122,8 +122,13 @@ Multi-Worker collaborative projects.
 
 Multi-channel identity recognition, permission enforcement, and primary notification routing.
 
+Check current primary channel:
+```bash
+bash /opt/hiclaw/agent/skills/channel-management/scripts/manage-primary-channel.sh --action show
+```
+
 - In a group room with multiple human users → identify each sender as admin, trusted contact, or unknown (ignore unknown)
-- Admin messages from any non-Matrix channel for the first time → run first-contact protocol, ask about primary channel
+- Admin messages from a non-Matrix channel that doesn't match current primary channel → run first-contact protocol, ask about primary channel
 - Admin says "switch my primary channel to Discord"
 - Admin says "you can talk to the person who just messaged" → add trusted contact
 - Working in a Matrix room and need an urgent admin decision → cross-channel escalation

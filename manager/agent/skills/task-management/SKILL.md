@@ -124,6 +124,17 @@ Before creating a task, determine the correct type:
      --action complete --task-id {task-id}
    ```
    Log to `memory/YYYY-MM-DD.md`.
+7. Notify admin that the task is complete. **Read SOUL.md first** — use the identity, personality, and user's preferred language defined there when composing the notification.
+
+   Resolve the notification channel:
+   ```bash
+   bash /opt/hiclaw/agent/skills/task-management/scripts/resolve-notify-channel.sh
+   ```
+   The script outputs JSON with `channel`, `target`, and `via` fields. Use the `message` tool with those values:
+   - If `channel` is not `"none"`: send `[Task Completed] {task-id}: {title} — assigned to {worker}. {one-line summary from result.md}` to the resolved `target`.
+   - If `channel` is `"none"`: the admin DM room has not been discovered yet. Log a warning and skip notification (heartbeat will catch up).
+
+   Compose the message in the persona and language from SOUL.md. Keep it concise — one or two sentences summarizing the outcome.
 
 **Task directory layout:**
 ```

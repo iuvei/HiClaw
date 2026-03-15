@@ -8,5 +8,12 @@ Record image-affecting changes to `manager/`, `worker/`, `openclaw-base/` here b
 - fix(manager): lifecycle-worker.sh idle detection now considers infinite tasks — Workers with active infinite tasks are no longer auto-stopped
 - fix(manager): HEARTBEAT.md Steps 5/6 updated to treat infinite tasks as active for idle detection and anomaly checks
 - feat(manager): task-management SKILL.md adds finite vs infinite decision guide for the Agent
+- feat(manager): add resolve-notify-channel.sh to unify admin notification channel resolution (primary-channel → Matrix DM fallback)
+- feat(manager): add manage-primary-channel.sh for validated, atomic primary-channel.json operations (confirm/reset/show)
+- feat(manager): task-management SKILL.md adds admin notification step on finite task completion
+- feat(manager): project-management SKILL.md adds admin notification step on project task completion
+- refactor(manager): HEARTBEAT.md Step 7 and Step 1 now use resolve-notify-channel.sh instead of inline channel resolution
+- refactor(manager): channel-management SKILL.md replaces all manual cat/jq writes with manage-primary-channel.sh calls
+- fix(manager): TOOLS.md channel-management first-contact trigger corrected from "first time" to "channel mismatch", added show command
 - fix(manager): TOOLS.md clarifies copaw runtime vs deployment mode (copaw ≠ remote), adds Deployment column to runtime table
 - feat(manager): TOOLS.md task-management fewshot now includes infinite task trigger scenario
